@@ -250,14 +250,11 @@ This project demonstrates an end-to-end Machine Learning workflow for house pric
 The Random Forest Regressor achieved an R² score of 0.8937 on the held-out test set and was saved as the final trained model.
 
 Author
-
 Rajraushan Kumar
-
 BCA – Data Science & AI
 Gopal Narayan Singh University
 
-## Internship
+Internship
+AICTE | IBM SkillsBuild Data Analytics with AI Internship 2026
 
-**AICTE | IBM SkillsBuild Data Analytics with AI Internship 2026**
-
-Conducted by **BharatCares in association with AICTE and IBM**.
+Conducted by BharatCares in association with AICTE and IBM.
