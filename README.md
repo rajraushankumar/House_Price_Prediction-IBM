@@ -114,25 +114,46 @@ This visualization shows the relationship between the overall quality of a prope
 
 This visualization shows the relationship between above-ground living area and house sale price.
 
+📉 Actual vs Predicted Prices
+
+This visualization compares the actual house prices from the test dataset with the prices predicted by the Random Forest model.
+
+📊 Prediction Error Analysis
+
+The prediction error distribution was analyzed to understand how the model's predictions differ from the actual house prices.
+
+⭐ Feature Importance
+
+Feature importance analysis was performed using the trained Random Forest model.
+
+The analysis identified important features contributing to the model's predictions.
+
+Important features included:
+
+OverallQual
+GrLivArea
+TotalBsmtSF
+2ndFlrSF
+BsmtFinSF1
+1stFlrSF
+LotArea
+GarageArea
+GarageCars
+YearBuilt
 🤖 Machine Learning
-Data Preprocessing
+🔧 Data Preprocessing
 
 A Scikit-learn preprocessing pipeline was used to prepare the data.
 
 Numerical Features
 
-Missing numerical values were handled using:
+Missing numerical values were handled using median imputation.
 
-Median Imputation
 Categorical Features
 
-Missing categorical values were handled using:
+Missing categorical values were handled using most frequent value imputation.
 
-Most Frequent Value Imputation
-
-Categorical variables were then converted into numerical representations using:
-
-One-Hot Encoding
+Categorical variables were converted into numerical representations using One-Hot Encoding.
 
 A ColumnTransformer and Pipeline were used to maintain a consistent preprocessing workflow.
 
@@ -160,34 +181,8 @@ Model	MAE	RMSE	R²
 Linear Regression	$20,485.66	$31,327.80	0.8720
 Random Forest Regressor	$17,465.29	$28,554.98	0.8937
 
-The Random Forest Regressor achieved an R² score of 0.8937 on the project's test set.
+The Random Forest Regressor achieved an R² score of 0.8937 on the project's test set and was saved as the final model.
 
-📉 Actual vs Predicted Prices
-
-The following visualization compares the actual house prices from the test dataset with the prices predicted by the Random Forest model.
-
-📊 Prediction Error Analysis
-
-The prediction error distribution was analyzed to understand how the model's predictions differ from the actual house prices.
-
-⭐ Feature Importance
-
-Feature importance analysis was performed using the trained Random Forest model.
-
-The analysis identifies which features contributed most to the model's predictions.
-
-Important features included:
-
-OverallQual
-GrLivArea
-TotalBsmtSF
-2ndFlrSF
-BsmtFinSF1
-1stFlrSF
-LotArea
-GarageArea
-GarageCars
-YearBuilt
 💾 Model Saving
 
 The trained Random Forest model was saved using Joblib.
@@ -200,16 +195,16 @@ The saved model was subsequently loaded and successfully verified for prediction
 📁 Project Structure
 House_Price_Prediction_IBM/
 │
-├── 📂 data/
+├── data/
 │   └── train.csv
 │
-├── 📂 notebooks/
+├── notebooks/
 │   └── Rajraushan_House_Price_Prediction_IBM.ipynb
 │
-├── 📂 models/
+├── models/
 │   └── house_price_prediction_model.pkl
 │
-├── 📂 reports/
+├── reports/
 │   ├── saleprice_distribution.png
 │   ├── correlation_heatmap.png
 │   ├── overall_quality_vs_price.png
@@ -236,9 +231,9 @@ The .venv virtual environment is used locally for development and is not require
 💾 Joblib
 📗 OpenPyXL
 ▶️ How to Run the Project
-Step 1 – Clone or Download the Repository
+Step 1 – Open the Project
 
-Download the project repository and open the project folder in VS Code.
+Open the House_Price_Prediction_IBM folder in VS Code.
 
 Step 2 – Create a Virtual Environment
 python -m venv .venv
@@ -303,7 +298,7 @@ Project documentation
 GitHub project organization
 🎓 Internship
 
-This project was completed as part of the:
+This project was completed as part of:
 
 AICTE | IBM SkillsBuild Academic Internship – Data Analytics with AI
 
@@ -320,7 +315,8 @@ BCA – Data Science & AI
 Gopal Narayan Singh University
 
 GitHub: @rajraushankumar
-# 📌 Project Highlights
+
+📌 Project Highlights
 
 ✨ End-to-end machine learning project
 
@@ -342,9 +338,7 @@ GitHub: @rajraushankumar
 
 📋 Complete project documentation
 
----
-
-## ⭐ Thank You
+# ⭐ Thank You
 
 Thank you for visiting this project repository.
 
