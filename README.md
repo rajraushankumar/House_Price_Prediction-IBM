@@ -1,166 +1,171 @@
-# 🏠 House Price Prediction Using Machine Learning
+# House Price Prediction Using Machine Learning
 
-## 🎓 AICTE | IBM SkillsBuild Academic Internship – Data Analytics with AI
+## Project Overview
 
-A machine learning project developed as part of the **AICTE | IBM SkillsBuild Academic Internship – Data Analytics with AI**, conducted by **BharatCares** in association with **AICTE and IBM**.
+This project focuses on predicting residential house prices using Machine Learning techniques.
 
-The project analyzes residential property data and builds machine learning models to predict house sale prices.
+The project uses the **House Prices: Advanced Regression Techniques** dataset from Kaggle. The target variable is `SalePrice`, and the dataset contains various numerical and categorical features related to residential properties.
 
----
+Two Machine Learning models were developed and compared:
 
-## 👨‍💻 Project Information
+- Linear Regression
+- Random Forest Regressor
 
-| Information | Details |
-|---|---|
-| **Name** | Rajraushan Kumar |
-| **Program** | BCA – Data Science & AI |
-| **University** | Gopal Narayan Singh University |
-| **Project** | House Price Prediction Using Machine Learning |
-| **Domain** | Data Analytics & Machine Learning |
-| **Organization** | BharatCares |
-| **Duration** | 17 August 2026 – 30 September 2026 |
-| **Mode** | Virtual |
+After evaluation, the Random Forest Regressor achieved better performance and was saved as the final trained model.
 
 ---
 
-## 📌 Project Overview
+## Internship Information
 
-The objective of this project is to develop a machine learning system capable of predicting residential house prices based on property characteristics.
+- **Program:** AICTE | IBM SkillsBuild Data Analytics with AI Internship 2026
+- **Organization:** BharatCares in association with AICTE and IBM
+- **Project:** House Price Prediction Using Machine Learning
+- **Student:** Rajraushan Kumar
+- **Program:** BCA – Data Science & AI
+- **University:** Gopal Narayan Singh University
+- **Internship Duration:** 17 August 2026 – 30 September 2026
 
-### Machine Learning Workflow
+---
 
-```text
-Data Collection
-      ↓
-Data Understanding
-      ↓
-Data Cleaning
-      ↓
-Exploratory Data Analysis
-      ↓
-Data Preprocessing
-      ↓
-Model Training
-      ↓
-Model Evaluation
-      ↓
-Feature Importance Analysis
-      ↓
-Model Saving
+## Problem Statement
 
-Two regression algorithms were implemented:
+House prices depend on several factors such as the overall quality of the property, living area, basement area, garage characteristics, location-related features, and construction year.
 
-Linear Regression
-Random Forest Regressor
-🎯 Objectives
-Analyze the house price dataset.
-Understand relationships between property features and sale prices.
-Handle missing values.
-Perform exploratory data analysis.
-Prepare numerical and categorical features.
-Train regression models.
-Evaluate model performance.
-Analyze feature importance.
-Save and verify the trained model.
-📊 Dataset
+The objective of this project is to build a Machine Learning model that can learn from historical housing data and predict the sale price of residential properties.
 
-House Prices: Advanced Regression Techniques
+---
 
-Source: Kaggle – House Prices Dataset
+## Objectives
 
-The dataset contains residential property information and corresponding sale prices.
+- Analyze the house price dataset.
+- Perform Exploratory Data Analysis (EDA).
+- Handle missing values.
+- Preprocess numerical and categorical features.
+- Train Machine Learning regression models.
+- Compare model performance using evaluation metrics.
+- Identify important features affecting house prices.
+- Save the trained Machine Learning model for future use.
 
-Dataset Information	Value
-Records	1,460
-Explanatory Features	80
-Target Variable	SalePrice
-Problem Type	Regression
-🔍 Exploratory Data Analysis
+---
 
-The project includes the following analyses:
+## Dataset
 
-Sale price distribution
-Correlation analysis
-Overall quality vs sale price
-Living area vs sale price
-Actual vs predicted prices
-Prediction error analysis
-Feature importance
-📈 Sale Price Distribution
+The dataset used in this project is:
 
-🔥 Correlation Heatmap
+**House Prices: Advanced Regression Techniques**
 
-🏠 Overall Quality vs Sale Price
+Dataset source:
 
-📐 Living Area vs Sale Price
+https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data
 
-📉 Actual vs Predicted Prices
+The training dataset contains:
 
-📊 Prediction Error Analysis
+- **1,460 records**
+- **81 columns**
+- **80 input features**
+- **1 target variable**
 
-⭐ Feature Importance
+### Target Variable
 
-🤖 Machine Learning
-🔧 Data Preprocessing
+`SalePrice`
 
-A Scikit-learn preprocessing pipeline was used.
+The target variable represents the final sale price of each residential property.
 
-Numerical missing values → Median Imputation
-Categorical missing values → Most Frequent Imputation
-Categorical variables → One-Hot Encoding
-ColumnTransformer and Pipeline → Consistent preprocessing
-🧠 Models Used
+---
 
-1. Linear Regression
+## Technologies Used
 
-Used as the baseline regression model.
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Jupyter Notebook
+- Joblib
+- OpenPyXL
 
-2. Random Forest Regressor
+---
 
-Used as the main tree-based regression model.
+## Machine Learning Models
 
-Configuration:
+### 1. Linear Regression
 
-n_estimators = 300
-random_state = 42
-n_jobs = -1
-📊 Model Performance
+Linear Regression was used as a baseline regression model.
+
+### 2. Random Forest Regressor
+
+Random Forest Regressor was used as the main Machine Learning model.
+
+Model configuration:
+
+- Number of trees: 300
+- Random state: 42
+- `n_jobs = -1`
+
+---
+
+## Data Preprocessing
+
+The following preprocessing steps were performed:
+
+1. Loaded the dataset using Pandas.
+2. Inspected the dataset structure.
+3. Checked missing values.
+4. Separated input features and target variable.
+5. Identified numerical and categorical features.
+6. Applied median imputation to numerical features.
+7. Applied most-frequent imputation to categorical features.
+8. Applied One-Hot Encoding to categorical features.
+9. Split the dataset into training and testing sets using an 80:20 ratio.
+
+---
+
+## Exploratory Data Analysis
+
+The project includes analysis of:
+
+- Sale price distribution
+- Correlation between numerical features
+- Overall Quality and Sale Price
+- Above Ground Living Area and Sale Price
+- Actual vs Predicted prices
+- Prediction errors
+- Feature importance
+
+Some important features identified during the analysis include:
+
+- Overall Quality (`OverallQual`)
+- Above Ground Living Area (`GrLivArea`)
+- Total Basement Area (`TotalBsmtSF`)
+- First Floor Area (`1stFlrSF`)
+- Garage-related features
+- Year Built
+
+---
+
+## Model Performance
 
 The models were evaluated using:
 
-MAE – Mean Absolute Error
-RMSE – Root Mean Squared Error
-R² – Coefficient of Determination
-Model	MAE	RMSE	R²
-Linear Regression	$20,485.66	$31,327.80	0.8720
-Random Forest Regressor	$17,465.29	$28,554.98	0.8937
+- Mean Absolute Error (MAE)
+- Root Mean Squared Error (RMSE)
+- R² Score
 
-The Random Forest Regressor achieved an R² score of 0.8937 on the project test set and was saved as the final model.
+### Results
 
-⭐ Feature Importance
+| Model | MAE | RMSE | R² Score |
+|---|---:|---:|---:|
+| Linear Regression | $20,485.66 | $31,327.80 | 0.8720 |
+| Random Forest Regressor | $17,465.29 | $28,554.98 | 0.8937 |
 
-The Random Forest model identified several important features, including:
+The Random Forest Regressor achieved an R² score of **0.8937** on the held-out test set.
 
-OverallQual
-GrLivArea
-TotalBsmtSF
-2ndFlrSF
-BsmtFinSF1
-1stFlrSF
-LotArea
-GarageArea
-GarageCars
-YearBuilt
-💾 Model Saving
+---
 
-The trained Random Forest model was saved using Joblib.
+## Project Structure
 
-models/
-└── house_price_prediction_model.pkl
-
-The saved model was successfully loaded and verified for prediction.
-
-📁 Project Structure
+```text
 House_Price_Prediction_IBM/
 │
 ├── data/
@@ -179,103 +184,80 @@ House_Price_Prediction_IBM/
 │   ├── living_area_vs_price.png
 │   ├── actual_vs_predicted.png
 │   ├── prediction_errors.png
-│   ├── feature_importance.png
-│   └── House_Price_Prediction_Project_Report_Rajraushan_Kumar.docx
+│   └── feature_importance.png
 │
 ├── requirements.txt
-└── README.md
-🛠️ Technologies Used
-🐍 Python
-🐼 Pandas
-🔢 NumPy
-📊 Matplotlib
-📈 Seaborn
-🤖 Scikit-learn
-📓 Jupyter Notebook
-💾 Joblib
-📗 OpenPyXL
-▶️ How to Run the Project
-1. Clone the Repository
-git clone https://github.com/rajraushankumar/House_Price_Prediction_IBM.git
-cd House_Price_Prediction_IBM
-2. Create a Virtual Environment
-python -m venv .venv
-3. Activate the Environment
+├── README.md
+└── .venv/
 
-Windows:
+
+Setup and Installation
+1. Clone or download the project
+
+Download the project folder to your computer.
+
+2. Create a virtual environment
+python -m venv .venv
+3. Activate the virtual environment
+
+For Windows:
 
 .venv\Scripts\activate
-4. Install Dependencies
+4. Install the required libraries
 pip install -r requirements.txt
 5. Open the Jupyter Notebook
+jupyter notebook
+
+Open:
+
 notebooks/Rajraushan_House_Price_Prediction_IBM.ipynb
-6. Run the Notebook
+6. Run the notebook
 
-Select the project's Python environment and run all cells from beginning to end.
+Run the notebook cells sequentially or use Run All.
 
-🔎 Key Findings
-Overall house quality has an important relationship with sale price.
-Above-ground living area is an important feature for price prediction.
-Both numerical and categorical features contribute to the prediction model.
-Random Forest Regressor achieved an R² score of 0.8937 on the test set.
-The trained model was successfully saved using Joblib.
-The saved model was successfully loaded and verified.
-OverallQual and GrLivArea were among the most influential features.
-🚀 Future Improvements
+Model Saving
+
+The trained Random Forest model is saved using Joblib:
+
+models/house_price_prediction_model.pkl
+
+The saved model was loaded again to verify that it can successfully generate predictions.
+
+Key Findings
+House prices show a right-skewed distribution.
+Overall Quality has a strong relationship with Sale Price.
+Above Ground Living Area is also an important factor in predicting house prices.
+Random Forest Regressor achieved better test-set metrics than the Linear Regression baseline.
+Feature importance analysis provides insight into the variables that contribute most to the model's predictions.
+Limitations
+The model was evaluated using a single held-out test split.
+External real-world housing data was not used for validation.
+House prices can also be affected by factors that are not represented in the dataset.
+Future Improvements
+
+Future improvements could include:
+
 Hyperparameter tuning
 Cross-validation
 Advanced feature engineering
-Outlier treatment
-Target variable transformation
-Additional regression algorithms
-Model deployment
-Web-based prediction interface
-Interactive prediction dashboard
-📚 Project Learning Outcomes
+Testing additional regression algorithms
+Deployment as a web application
+Integration with a user-friendly prediction interface
+Conclusion
 
-Through this project, I gained practical experience in:
+This project demonstrates an end-to-end Machine Learning workflow for house price prediction, including data loading, exploratory data analysis, preprocessing, model training, evaluation, feature importance analysis, and model saving.
 
-Data cleaning
-Exploratory data analysis
-Data visualization
-Numerical and categorical preprocessing
-Machine learning pipelines
-Regression algorithms
-Model evaluation
-Feature importance analysis
-Model persistence using Joblib
-Project documentation
-GitHub project organization
-🎓 Internship
+The Random Forest Regressor achieved an R² score of 0.8937 on the held-out test set and was saved as the final trained model.
 
-AICTE | IBM SkillsBuild Academic Internship – Data Analytics with AI
-
-Conducted by: BharatCares in association with AICTE and IBM
-Duration: 17 August 2026 – 30 September 2026
-Mode: Virtual
-
-👤 Author
+Author
 
 Rajraushan Kumar
 
 BCA – Data Science & AI
 Gopal Narayan Singh University
 
-GitHub: @rajraushankumar
+## Internship
 
-📌 Project Highlights
-✨ End-to-end Machine Learning project
-📊 Exploratory Data Analysis and visualization
-🤖 Two regression models implemented
-🌲 Random Forest with 300 estimators
-📈 Model evaluation using MAE, RMSE and R²
-⭐ Feature importance analysis
-💾 Trained model saved using Joblib
-📓 Complete Jupyter Notebook
-📄 Complete project report
-📋 Complete project documentation
-⭐ Thank You
+**AICTE | IBM SkillsBuild Data Analytics with AI Internship 2026**
 
-Thank you for visiting this project repository.
-
-If you find this project useful, feel free to explore the notebook, visualizations, and project documentation.
+Conducted by **BharatCares in association with AICTE and IBM**.
