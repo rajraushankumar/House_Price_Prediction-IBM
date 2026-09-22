@@ -53,6 +53,8 @@ Two regression algorithms were implemented and evaluated:
 
 Linear Regression
 Random Forest Regressor
+
+
 🎯 Objectives
 
 The main objectives of this project are:
@@ -192,7 +194,7 @@ models/
 
 The saved model was subsequently loaded and successfully verified for prediction.
 
-📁 Project Structure
+##📁 **Project Structure**
 House_Price_Prediction_IBM/
 │
 ├── data/
@@ -296,7 +298,8 @@ Feature importance analysis
 Model persistence using Joblib
 Project documentation
 GitHub project organization
-🎓 Internship
+
+## 🎓 **Internship**
 
 This project was completed as part of:
 
@@ -308,7 +311,8 @@ Duration: 17 August 2026 – 30 September 2026
 
 Mode: Virtual
 
-👤 Author
+
+## 👤 **Author**
 Rajraushan Kumar
 
 BCA – Data Science & AI
@@ -338,8 +342,7 @@ GitHub: @rajraushankumar
 
 📋 Complete project documentation
 
-# ⭐ Thank You
-
+# ⭐ **Thank You**
 Thank you for visiting this project repository.
 
 If you find this project useful, feel free to explore the notebook, visualizations, and project documentation.
